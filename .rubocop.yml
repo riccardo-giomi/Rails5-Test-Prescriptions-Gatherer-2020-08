@@ -84,6 +84,8 @@ Bundler/OrderedGems:
 
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false  # because that's how Noel Rappin does it in the book
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 Layout/SpaceInsideArrayLiteralBrackets:
@@ -118,13 +120,7 @@ Style/RedundantRegexpEscape:
 Style/SlicingWithRange:
   Enabled: true
 Style/StringLiterals:
-  Enabled: true
-  Exclude:
-    - "config/application.rb"
-    - "config/puma.rb"
-    - "config/environments/production.rb"
-    - "config/spring.rb"
-    - "spec/rails_helper.rb"
+  Enabled: false  # because the book uses double quotes
 Style/SymbolArray:
   Exclude:
     - "Gemfile"  # because the platforms uses symbols and Gemfile doesn't like the %i
