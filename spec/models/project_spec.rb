@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Project do
+RSpec.describe Project, type: :model do
   let(:project) { Project.new }
   let(:task) { Task.new }
 
@@ -69,7 +69,6 @@ RSpec.describe Project do
       project.due_date = 6.months.from_now
       expect(project).to be_on_schedule
     end
-
   end
-
 end
+
